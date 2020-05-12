@@ -1,0 +1,51 @@
+<div class="row">
+    <div class="col-md-12">
+        <div class="card">
+            <div class="card-header">
+                <h5 class="card-title">List of Customer</h5>
+                <div class="card-tools">
+                    <button type="button" class="btn btn-tool" data-card-widget="collapse">
+                        <i class="fas fa-minus"></i>
+                    </button>
+                    <button type="button" class="btn btn-tool" data-card-widget="remove">
+                        <i class="fas fa-times"></i>
+                    </button>
+                </div>
+            </div>
+            <!-- /.card-header -->
+            <div class="card-body">
+                <div class="row">
+                    <kendo-grid [data]="gridView">
+                    <!--<kendo-grid-column field="customerNo" title="No">
+                        <ng-template kendoGridCellTemplate let-dataItem="dataItem">
+                            {{dataItem.id}} {{dataItem.customerNo}}
+                        </ng-template>
+                    </kendo-grid-column>-->
+                    <kendo-grid-column field="id" title="ID"></kendo-grid-column>
+                    <kendo-grid-column field="customerNo" title="No"></kendo-grid-column>
+                    <kendo-grid-column field="customerName" title="Name"></kendo-grid-column>
+                    <kendo-grid-column field="gender" title="Gender"></kendo-grid-column>
+                    <kendo-grid-column field="dateOfBirth" title="Birth Date"></kendo-grid-column>
+                    <kendo-grid-column field="nationality" title="Nationality"></kendo-grid-column>
+                    <kendo-grid-column field="customerImage" title="Photo">
+                        <!--<ng-template kendoGridCellTemplate let-dataItem="dataItem">
+                            <img src="data:image/jpg;base64, {{dataItem.customerImage}}"  height="40" width="40" alt="Customer Image"/>
+                        </ng-template>-->
+                    </kendo-grid-column>
+                    <kendo-grid-column>
+                        <ng-template kendoGridCellTemplate>
+                            <button kendoGridEditCommand class="k-primary">Edit</button> &nbsp;
+                            <button kendoGridRemoveCommand>Delete</button>
+                        </ng-template>
+                    </kendo-grid-column>
+                </kendo-grid>
+                </div>
+                <!-- /.row -->
+            </div>
+            <!-- ./card-body -->
+        </div>
+        <!-- /.card -->
+    </div>
+    <!-- /.col -->
+</div>
+<!-- /.row -->

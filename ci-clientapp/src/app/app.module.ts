@@ -7,6 +7,14 @@ import { FooterComponent } from './_layout/footer/footer.component';
 import { TopbarComponent } from './_layout/topbar/topbar.component';
 import { SidebarComponent } from './_layout/sidebar/sidebar.component';
 import { ContentWrapperComponent } from './_layout/content-wrapper/content-wrapper.component';
+import { CustomerListComponent } from './customer-list/customer-list.component';
+import { InputsModule } from '@progress/kendo-angular-inputs';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { GridModule } from '@progress/kendo-angular-grid';
+import { HttpClientModule } from '@angular/common/http';
+
+
+
 
 
 @NgModule({
@@ -15,11 +23,16 @@ import { ContentWrapperComponent } from './_layout/content-wrapper/content-wrapp
     FooterComponent,
     TopbarComponent,
     SidebarComponent,
-    ContentWrapperComponent
+    ContentWrapperComponent,
+    CustomerListComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    HttpClientModule,
+    AppRoutingModule,
+    InputsModule,
+    BrowserAnimationsModule,
+    GridModule
   ],
   providers: [],
   bootstrap: [AppComponent]
